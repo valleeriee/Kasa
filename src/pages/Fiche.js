@@ -1,6 +1,6 @@
 function Fiche() {
     return (
-        <div>
+        <div className="container">
             <h1>Fiche</h1>
         </div>
     )

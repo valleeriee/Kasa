@@ -1,0 +1,34 @@
+body {
+	background-color: var(--bg-color);
+}
+
+.container {
+	position: relative;
+	width: 100%;
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: 0 100px;
+}
+
+.box-large {
+	position: relative;
+	width: 100%;
+}
+
+.hidetext {
+	font-size: 0;
+	line-height: 0;
+	display: block;
+}
+
+.img-responsive {
+	width: 100%; 
+	height: auto;
+	display: block;
+}
+
+.img-cover {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}

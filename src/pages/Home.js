@@ -1,7 +1,11 @@
+import Banner from "../components/Banner"
+
 function Home() {
     return (
-        <div>
-            <h1>Home</h1>
+        <div className="container">
+            <Banner>
+                <h1 className="tt-h1">Chez vous, partout et ailleurs</h1>
+            </Banner>
         </div>
     )
 }

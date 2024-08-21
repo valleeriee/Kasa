@@ -1,0 +1,26 @@
+.menu {
+    display: flex;
+    gap: 60px;
+
+    .lk-menu{
+        font-size: $font-size-lk;
+        color: $text-color;
+        font-weight: 500;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            border-top: 1px solid transparent;
+            transition: all 0.3s;
+            display: block;
+        }
+
+        &.active, 
+        &:hover {
+            &::after {
+                border-top-color: $text-color;
+            }
+        }
+    }
+}

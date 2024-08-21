@@ -1,0 +1,14 @@
+// --------------------------------------------------
+// Typos
+// --------------------------------------------------
+body {
+	font-family: $text-font;
+	font-size: $font-size-base;
+	color: $text-color;
+	line-height: $line-height-base;
+}
+
+// titres
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
