@@ -1,10 +1,8 @@
-import visuel from "../assets/bandeau-home.jpg"
-
-function Banner({children}) {
+function Banner(props) {
     return (
         <div className="banner">
-            <img src={visuel} alt="Kasa" className="img-cover" />
-            {children}
+            <img src={props.img} alt="Kasa" className="img-cover" />
+            {props.children}
         </div>
     )
 }

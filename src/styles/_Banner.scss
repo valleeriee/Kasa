@@ -17,6 +17,12 @@
         display: block;
     }
 
+    .pg-about & {
+        &::after {
+            background-color: $bg-banner-light;
+        }
+    }
+
     .tt-h1 {
         position: absolute;
         top: 50%;
