@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Home from './pages/home'
-import Fiche from './pages/fiche'
-import Apropos from './pages/apropos'
+import Home from './pages/Home'
+import Fiche from './pages/Fiche'
+import Apropos from './pages/Apropos'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
