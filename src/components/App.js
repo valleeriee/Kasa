@@ -6,16 +6,14 @@ import Header from './Header'
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <Header />
-        <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/fiche/" element={<Fiche />} />
-            <Route path="/apropos/" element={<Apropos />} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/fiche/" element={<Fiche />} />
+          <Route path="/apropos/" element={<Apropos />} />
+      </Routes>
+    </Router>
   );
 }
 
