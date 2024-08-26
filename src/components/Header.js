@@ -6,7 +6,7 @@ import "../styles/Header.scss"
 function Header() {
     return (
         <header className="header">
-            <div className="container">
+            <div className="page">
                 <NavLink to="/" className="lk-menu"><img src={logo} alt="Kasa" className="logo" /></NavLink>
                 <Nav />
             </div>

@@ -1,0 +1,23 @@
+@import './variables';
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 209px;
+    padding-bottom: 29px;
+    background-color: $text-color;
+
+    .logo {
+        width: 122px;
+        height: auto;
+    }
+
+    .copyright {
+        margin-top: 35px;
+        font-size: $font-size-lk;
+        color: $text-white;
+        font-weight: 500;
+    }
+}

@@ -1,0 +1,11 @@
+@import './variables';
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 5.3%;
+    margin: 43px 0 50px;
+    padding: 50px;
+    border-radius: 25px;
+    background-color: $bg-gallery;
+}

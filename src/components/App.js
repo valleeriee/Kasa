@@ -3,6 +3,7 @@ import Home from '../pages/Home'
 import Fiche from '../pages/Fiche'
 import Apropos from '../pages/Apropos'
 import Header from './Header'
+import Footer from './Footer'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/fiche/" element={<Fiche />} />
           <Route path="/apropos/" element={<Apropos />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }

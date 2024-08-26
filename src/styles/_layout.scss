@@ -2,7 +2,17 @@ body {
 	background-color: var(--bg-color);
 }
 
-.container {
+#root {
+	display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+	& > .page {
+		flex: 1;
+	}
+}
+
+.page {
 	position: relative;
 	width: 100%;
 	max-width: $max-width;
