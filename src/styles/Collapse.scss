@@ -2,6 +2,11 @@
 
 .collapse {
     width: 100%;
+    max-height: 52px;
+    background-color: $bg-texte-collapse;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
 
     & + & {
         margin-top: 30px;
@@ -10,13 +15,37 @@
     .tt-h2 {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         height: 52px;
-        padding: 0 0 0 15px;
+        padding: 0 20px 0 15px;
         border-radius: 5px;
-        background-color: $bg-collapse;
+        background-color: $bg-titre-collapse;
         color: $text-white;
         font-weight: 700;
         cursor: pointer;
+
+        &::after {
+            content: "";
+            width: 32px;
+            height: 32px;
+            background: url(../assets/arrow.png) no-repeat;
+            background-size: 100% 100%;
+            display: block;
+            transition: all 0.5s;
+        }
     }
-    
+
+    .paragraphe {
+        padding: 25px 28px 20px 20px;
+    }
+
+    &.clps-open {
+        max-height: 300px;
+
+        .tt-h2 {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
 }
