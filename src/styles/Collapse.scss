@@ -8,10 +8,6 @@
     overflow: hidden;
     transition: max-height 0.5s ease-out;
 
-    & + & {
-        margin-top: 30px;
-    }
-
     .tt-h2 {
         display: flex;
         align-items: center;
@@ -36,7 +32,7 @@
     }
 
     .paragraphe {
-        padding: 25px 28px 20px 20px;
+        padding: 20px 28px 20px 20px;
     }
 
     &.clps-open {
