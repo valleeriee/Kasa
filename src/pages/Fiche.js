@@ -10,26 +10,20 @@ function Fiche() {
     const {idLogement} = useParams()
 
     const indexLogement = logements.indexOf(`${idLogement}`)
-    const titleLogement = data[indexLogement].title
-    const locationLogement = data[indexLogement].location
-    const tagsLogement = data[indexLogement].tags
-    const descriptionLogement = data[indexLogement].description
-    const equipmentsLogement = data[indexLogement].equipments
-    console.log(equipmentsLogement)
 
     return (
         logements.includes(`${idLogement}`) ? 
             <div className="page">
-                <h1 className="tt-h1">{titleLogement}</h1>
-                <p className="paragraphe">{locationLogement}</p>
+                <h1 className="tt-h1">{data[indexLogement].title}</h1>
+                <p className="paragraphe">{data[indexLogement].location}</p>
                 <ul className="tags">
-                    {tagsLogement.map((tag, index) => (
+                    {data[indexLogement].tags.map((tag, index) => (
                         <li key={`tag-${index}`}>{tag}</li>
                     ))}
                 </ul>
                 <div className="details">
-                    <Collapse title="Description" description={descriptionLogement} />
-                    <Collapse title="Équipements" equipments={equipmentsLogement} />
+                    <Collapse title="Description" description={data[indexLogement].description} />
+                    <Collapse title="Équipements" equipments={data[indexLogement].equipments} />
                 </div>
             </div>
             : <Error />
