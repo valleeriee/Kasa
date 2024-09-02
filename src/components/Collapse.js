@@ -2,7 +2,7 @@ import "../styles/Collapse.scss"
 
 function Collapse(props) {
     function showDescription(e) {
-        e.currentTarget.classList.toggle('clps-open');
+        e.currentTarget.classList.toggle('clps-open')
     }
 
     const title = props.title ? <h2 className="tt-h2">{props.title}</h2> : ""
@@ -23,7 +23,7 @@ function Collapse(props) {
                 {equipments}
             </div>
         </div>
-    );
+    )
 }
   
 export default Collapse;
