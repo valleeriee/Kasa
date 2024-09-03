@@ -5,29 +5,35 @@ import arrowNext from "../assets/slider-next.png"
 
 function Carrousel(props) {
     const pictures = props.pictures
-
-    //const [count, setCount] = useState(0)
-    const [style, setStyle] = useState("transform: translateX(0)")
-    const [xPos, setXpos] = useState(0)
+    const nbPhotos = pictures.length
+    const [count, setCount] = useState(0)
+    const photo = pictures[count]
 
     const handleClick = (e) => {
         e.preventDefault()
-        e.target.classList.contains("arrow-right") ? setXpos(x => x + 100) : setXpos(x => x - 100)
-        setStyle({transform: `translateX(${xPos}%)`})
-        console.log(style)
+        e.target.classList.contains("arrow-right") ? checkSlideNext() : checkSlidePrev()
     }
+
+    const checkSlideNext = () => {
+        count < nbPhotos - 1 ? setCount(x => x + 1) : setCount(x => 0)
+    }
+
+    const checkSlidePrev = () => {
+        count > 0 ? setCount(x => x - 1) : setCount(x => nbPhotos - 1)
+    }
+
+    const sliderNav = nbPhotos > 1 ? (
+        <>
+            <img src={arrowPrev} alt="Précédent" className="arrow arrow-left" onClick={handleClick} />
+            <img src={arrowNext} alt="Suivant" className="arrow arrow-right" onClick={handleClick} />
+            <p className="numerotation">{count + 1}/{nbPhotos}</p>
+        </>
+    ) : ""
 
     return (
         <div className="carrousel">
-            <img src={arrowPrev} alt="Précédent" className="arrow arrow-left" onClick={handleClick} />
-            <div className="slides" style={{style}}>
-                {pictures.map((photo, index) => (
-                    <div className="visuel" key={`slide-${index}`}>
-                        <img src={photo} alt="" className="img-cover" />
-                    </div>
-                ))}
-            </div>
-            <img src={arrowNext} alt="Suivant" className="arrow arrow-right" onClick={handleClick} />
+            {sliderNav}
+            <div className="visuel"><img src={photo} alt="" className="img-cover" /></div>
         </div>
     )
 }
