@@ -1,11 +1,21 @@
 @import './variables';
+@import './responsive';
 
 .menu {
     display: flex;
     gap: 60px;
 
+    @include md {
+        gap: 26px;
+    }
+
     .lk-menu{
         font-size: $font-size-lk;
+
+        @include md {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
 
         &::after {
             content: '';

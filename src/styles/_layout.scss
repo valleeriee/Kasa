@@ -1,3 +1,5 @@
+@import './responsive';
+
 body {
 	background-color: var(--bg-color);
 }
@@ -18,11 +20,14 @@ body {
 	max-width: $max-width;
 	margin: 0 auto;
 	padding: 0 100px;
-}
 
-.box-large {
-	position: relative;
-	width: 100%;
+	@include lg {
+        padding: 0 50px;
+    }
+
+	@include md {
+        padding: 0 20px;
+    }
 }
 
 .hidetext {

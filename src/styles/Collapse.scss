@@ -1,4 +1,5 @@
 @import './variables';
+@import './responsive';
 
 .collapse {
     width: 100%;
@@ -8,6 +9,10 @@
     overflow: hidden;
     transition: max-height 0.5s ease-out;
 
+    @include md {
+		max-height: 30px;
+    }
+
     .tt-h2 {
         display: flex;
         align-items: center;
@@ -16,23 +21,39 @@
         padding: 0 20px 0 15px;
         border-radius: 5px;
         background-color: $bg-titre-collapse;
+        font-size: $font-size-lk;
         color: $text-white;
         font-weight: 700;
         cursor: pointer;
 
+        @include md {
+            max-height: 30px;
+            padding: 0 12px 0 10px;
+            font-size: 13px;
+        }
+
         &::after {
             content: "";
-            width: 32px;
-            height: 32px;
+            width: 24px;
+            height: 14px;
             background: url(../assets/arrow.png) no-repeat;
             background-size: 100% 100%;
             display: block;
             transition: all 0.5s;
+
+            @include md {
+                width: 16px;
+                height: 9px;
+            }
         }
     }
 
     .paragraphe {
         padding: 20px 28px 20px 20px;
+
+        @include md {
+            font-size: 12px;
+        }
     }
 
     &.clps-open {

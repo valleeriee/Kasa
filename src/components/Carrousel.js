@@ -22,13 +22,13 @@ function Carrousel(props) {
         count > 0 ? setCount(x => x - 1) : setCount(x => nbPhotos - 1)
     }
 
-    const sliderNav = nbPhotos > 1 ? (
+    const sliderNav = nbPhotos > 1 && (
         <>
             <img src={arrowPrev} alt="Précédent" className="arrow arrow-left" onClick={handleClick} />
             <img src={arrowNext} alt="Suivant" className="arrow arrow-right" onClick={handleClick} />
             <p className="numerotation">{count + 1}/{nbPhotos}</p>
         </>
-    ) : ""
+    )
 
     return (
         <div className="carrousel">

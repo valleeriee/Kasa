@@ -1,4 +1,5 @@
 @import './variables';
+@import './responsive';
 
 .footer {
     display: flex;
@@ -8,6 +9,11 @@
     height: 209px;
     padding-bottom: 29px;
     background-color: $text-color;
+
+    @include md {
+		justify-content: center;
+        padding-bottom: 0;
+    }
 
     .logo {
         width: 122px;
@@ -19,5 +25,13 @@
         font-size: $font-size-lk;
         color: $text-white;
         font-weight: 500;
+
+        @include md {
+            width: 120px;
+            margin-top: 10px;
+            font-size: 12px;
+            text-align: center;
+            line-height: 17px;
+        }
     }
 }

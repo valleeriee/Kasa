@@ -1,3 +1,5 @@
+@import './responsive';
+
 .rating {
     display: flex;
     
@@ -7,6 +9,11 @@
         background: url(../assets/star-off.png) no-repeat;
         background-size: 100% 100%;
         display: block;
+
+        @include md {
+            width: 18px;
+            height: 18px;
+        }
 
         &.star-on {
             background-image: url(../assets/star-on.png);

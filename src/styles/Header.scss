@@ -1,5 +1,11 @@
+@import './responsive';
+
 .header {
     padding: 45px 0 50px;
+
+    @include md {
+		padding: 20px 0 25px;
+    }
 
     .page {
         display: flex;
@@ -10,5 +16,9 @@
     .logo {
         width: 210px;
         height: auto;
+
+        @include md {
+            width: 145px;
+        }
     }
 }

@@ -1,4 +1,5 @@
 @import './variables';
+@import './responsive';
 
 .gallery {
     display: flex;
@@ -8,4 +9,15 @@
     padding: 50px;
     border-radius: 25px;
     background-color: $bg-gallery;
+
+    @include lg {
+		  column-gap: 6%;
+    }
+
+    @include md {
+		  gap: 20px 0;
+      margin: 22px 0 27px;
+      padding: 0;
+      background-color: transparent;
+    }
 }
