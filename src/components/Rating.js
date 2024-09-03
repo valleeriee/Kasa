@@ -1,19 +1,16 @@
 import "../styles/Rating.scss"
 
 function Rating(props) {
-    const base = [...Array(parseInt(5)).keys()]
-    const score = `${props.rating}`
+    const score = props.rating
     const starsOn = [...Array(parseInt(score)).keys()]
+    const diff = 5 - score
+    const starsOff = [...Array(diff).keys()]
 
     return (
-        <div className="rating">
-            <ul className="rating-stars">
-                {base.map(item => <li key={`rating-${item}`}><span className="star"></span></li>)}
-            </ul>
-            <ul className="rating-stars">
-                {starsOn.map(item => <li key={`score-${item}`}><span className="star star-on"></span></li>)}
-            </ul>
-        </div>
+        <ul className="rating">
+            {starsOn.map(item => <li key={`on-${item}`}><span className="star star-on"></span></li>)}
+            {starsOff.map(item => <li key={`off-${item}`}><span className="star"></span></li>)}
+        </ul>
     )
   }
   

@@ -1,15 +1,5 @@
 .rating {
-    position: relative;
-}
-
-.rating-stars {
     display: flex;
-
-    &:nth-child(2) {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
     
     .star {
         width: 36px;
